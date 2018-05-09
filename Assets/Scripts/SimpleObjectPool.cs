@@ -24,7 +24,8 @@ public class SimpleObjectPool : MonoBehaviour
 		// otherwise, create a new instance
 		else 
 		{
-			spawnedGameObject = (GameObject)GameObject.Instantiate(prefab);
+			// ¢¬¬
+			spawnedGameObject = (GameObject)GameObject.Instantiate(prefab, this.transform.parent);
 
 			// add the PooledObject component to the prefab so we know it came from this pool
 			PooledObject pooledObject = spawnedGameObject.AddComponent<PooledObject>();

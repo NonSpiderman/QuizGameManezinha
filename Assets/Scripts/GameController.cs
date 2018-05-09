@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour {
 	private float timeRemaining;
 	private int questionIndex;
 	private int playerScore;
-	private List<GameObject> answerButtonGameObjetcs = new List<GameObject>();
+	private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
 	// Use this for initialization
 	void Start () 
@@ -48,7 +48,6 @@ public class GameController : MonoBehaviour {
 		RemoveAnswerButtons ();
 		QuestionData questionData = questionPool [questionIndex];
 
-		// TODO
 		audioSource = audioButton.GetComponent<AudioSource>();
 		audioSource.clip = questionData.questionAudio;
 		audioSource.Play ();
@@ -56,20 +55,21 @@ public class GameController : MonoBehaviour {
 		for (int i = 0; i < questionData.answers.Length; i++)
 		{
 			GameObject answerButtonGameObject = answerButtonObjectPool.GetObject();
-			answerButtonGameObjetcs.Add(answerButtonGameObject);
+			answerButtonGameObjects.Add(answerButtonGameObject);
 			answerButtonGameObject.transform.SetParent(answerButtonParent);
 
 			AnswerButton answerButton = answerButtonGameObject.GetComponent<AnswerButton>();
+			answerButton.transform.localScale.Set (1, 1, 1);
 			answerButton.Setup(questionData.answers[i]);
 		}
 	}
 
 	private void RemoveAnswerButtons()
 	{
-		while (answerButtonGameObjetcs.Count > 0) 
+		while (answerButtonGameObjects.Count > 0) 
 		{
-			answerButtonObjectPool.ReturnObject (answerButtonGameObjetcs [0]);
-			answerButtonGameObjetcs.RemoveAt (0);
+			answerButtonObjectPool.ReturnObject (answerButtonGameObjects [0]);
+			answerButtonGameObjects.RemoveAt (0);
 		}
 	}
 	public void AnswerButtonClicked(bool isCorrect)
@@ -113,7 +113,7 @@ public class GameController : MonoBehaviour {
 
 	private void UpdateTimeRemainingDisplay()
 	{
-		timeRemainingDisplayText.text = "Time: " + Mathf.Round (timeRemaining).ToString ();
+		timeRemainingDisplayText.text = Mathf.Round (timeRemaining).ToString ();
 	}
 	// Update is called once per frame
 	void Update ()
