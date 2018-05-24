@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1028766760062754}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 703.32367, y: 463.27692, z: 50}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,11 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714aab9140c9b0e46a15e29e844e58b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionDsiplayText: {fileID: 0}
+  answerButtonObjectPool: {fileID: 0}
+  questionDisplayText: {fileID: 0}
   scoreDisplayText: {fileID: 0}
   timeRemainingDisplayText: {fileID: 0}
-  answerButtonObjectPool: {fileID: 0}
   answerButtonParent: {fileID: 0}
   questionDisplay: {fileID: 0}
   roundEndDisplay: {fileID: 0}
   audioButton: {fileID: 0}
+  highScoreDisplay: {fileID: 114907844935719110, guid: e791e21380058dd4299a8bb99af1a825,
+    type: 2}

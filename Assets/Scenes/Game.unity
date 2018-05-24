@@ -734,6 +734,12 @@ Prefab:
       propertyPath: audioButton
       value: 
       objectReference: {fileID: 682547308}
+    - target: {fileID: 114369293788302028, guid: c651df290b2dd574595126e746630f61,
+        type: 2}
+      propertyPath: highScoreDisplay
+      value: 
+      objectReference: {fileID: 114907844935719110, guid: e791e21380058dd4299a8bb99af1a825,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c651df290b2dd574595126e746630f61, type: 2}
   m_IsPrefabParent: 0
