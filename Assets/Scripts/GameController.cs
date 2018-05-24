@@ -6,19 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-	public Text questionDsiplayText;
+	public SimpleObjectPool answerButtonObjectPool;
+	public Text questionDisplayText;
 	public Text scoreDisplayText;
 	public Text timeRemainingDisplayText;
-	public SimpleObjectPool answerButtonObjectPool;
 	public Transform answerButtonParent;
+
 	public GameObject questionDisplay;
 	public GameObject roundEndDisplay;
 	public GameObject audioButton;
+	public Text highScoreDisplay;
 
-	private AudioSource audioSource;
 	private DataController dataController;
 	private RoundData currentRoundData;
 	private QuestionData[] questionPool;
+	private AudioSource audioSource;
 
 	private bool isRoundActive;
 	private float timeRemaining;
@@ -100,6 +102,8 @@ public class GameController : MonoBehaviour {
 	public void EndRound()
 	{
 		isRoundActive = false;
+		dataController.SubmitNewPlayerScore (playerScore);
+		highScoreDisplay.text = dataController.GetHighestPlayerScore ().ToString ();
 
 		questionDisplay.SetActive (false);
 		roundEndDisplay.SetActive (true);
