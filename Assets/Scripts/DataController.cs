@@ -6,7 +6,7 @@ using System.IO;
 
 public class DataController : MonoBehaviour {
 	public RoundData[] allRoundData;
-	private PlayerProgress playerProgress;
+	public PlayerProgress playerProgress;
 	private string gameDataFileName = "data.json";
 
 	// Use this for initialization
@@ -20,6 +20,7 @@ public class DataController : MonoBehaviour {
 	public RoundData GetCurrentRoundData() {
 		return allRoundData [0];
 	}
+
 	public void SubmitNewPlayerScore(int newScore) {
 		if (newScore > playerProgress.highestScore) {
 			playerProgress.highestScore = newScore;

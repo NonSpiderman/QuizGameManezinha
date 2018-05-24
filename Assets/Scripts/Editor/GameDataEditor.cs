@@ -1,51 +1,63 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
+using System.Collections;
 using System.IO;
 
-public class GameDataEditor : EditorWindow {
+public class GameDataEditor :  EditorWindow
+{
 
 	public GameData gameData;
 
 	private string gameDataProjectFilePath = "/StreamingAssets/data.json";
 
 	[MenuItem ("Window/Game Data Editor")]
-	static void Init () {
+	static void Init()
+	{
 		EditorWindow.GetWindow (typeof(GameDataEditor)).Show ();
-		//GameDataEditor window = (GameDataEditor) EditorWindow.GetWindow (typeof(GameDataEditor));
-		//window.Show ();
 	}
-	void OnGui () {
-		if (gameData != null) {
+
+	void OnGUI()
+	{
+		if (gameData != null) 
+		{
 			SerializedObject serializedObject = new SerializedObject (this);
 			SerializedProperty serializedProperty = serializedObject.FindProperty ("gameData");
 			EditorGUILayout.PropertyField (serializedProperty, true);
+
 			serializedObject.ApplyModifiedProperties ();
-			if (GUILayout.Button ("Save data")) {
-				SaveGameData ();
+
+			if (GUILayout.Button ("Save data"))
+			{
+				SaveGameData();
 			}
 		}
 
-		if (GUILayout.Button ("Load data")) {
-			LoadGameData ();
+		if (GUILayout.Button ("Load data"))
+		{
+			LoadGameData();
 		}
 	}
-	private void LoadGameData () {
-		
+
+	private void LoadGameData()
+	{
 		string filePath = Application.dataPath + gameDataProjectFilePath;
 
 		if (File.Exists (filePath)) {
 			string dataAsJson = File.ReadAllText (filePath);
 			gameData = JsonUtility.FromJson<GameData> (dataAsJson);
-		} else {
-			gameData = new GameData ();
+		} else 
+		{
+			gameData = new GameData();
 		}
 	}
 
-	private void SaveGameData () {
+	private void SaveGameData()
+	{
+
 		string dataAsJson = JsonUtility.ToJson (gameData);
+
 		string filePath = Application.dataPath + gameDataProjectFilePath;
 		File.WriteAllText (filePath, dataAsJson);
+
 	}
 }
