@@ -14,3 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: bf2b3523da71e0844a3da4000724e7f9
+  - enabled: 1
+    path: Assets/Scenes/Levels.unity
+    guid: 91770ce99ce7b4c4db47f4b40e780392
+  - enabled: 1
+    path: Assets/Scenes/Inglesh.unity
+    guid: f00f9b23f8706de418441f65933993ab
+  - enabled: 1
+    path: Assets/Scenes/Manezes.unity
+    guid: 2edd578ce7bfb474ebef4ac793e091d8
+  - enabled: 1
+    path: Assets/Scenes/Omanhe.unity
+    guid: 5c51c5f6f62ffb440b4ebda91ac81c18
+  - enabled: 1
+    path: Assets/Scenes/Turishmo.unity
+    guid: cc235e699457dc64d907008662189909
