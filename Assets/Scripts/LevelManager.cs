@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 	
-	public void StartOmanhe() {
-		SceneManager.LoadScene ("Omanhe");
+	public void StartOhmanhe() {
+		SceneManager.LoadScene ("Ohmanhe");
 	}
 
 	public void StartTurishmo () {
@@ -15,11 +15,9 @@ public class LevelManager : MonoBehaviour {
 
 	public void StartInglesh () {
 		SceneManager.LoadScene ("Inglesh");
-
 	}
 
 	public void StartManezes () {
 		SceneManager.LoadScene ("Manezes");
-
 	}
 }

@@ -1,0 +1,12 @@
+As Scenes contem as cenas que terao no jogo e algumas do jogo antigo.
+As novas cenas sao:
+-Manezes - fase 1 do jogo
+-Inglesh - fase 2 do jogo
+-Turishmo - fase 3 do jogo
+-Ohmanhe - fase 4 do jogo
+-MenuInicial - onde tera o menu com Jogar e Creditos
+-MenuTemas - Onde tem as fases/temas
+A cena antiga Game esta sendo utilizada para reorganizarmos o jogo
+e como padrao de audios e respostas, posteriormente sera excluida
+A cena Persistent sera excluida tambem mas so depois de realocarmos o DataController
+e resolvermos os erros que aparecerao com essa mudanca
