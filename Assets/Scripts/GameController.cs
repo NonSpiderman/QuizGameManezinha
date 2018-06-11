@@ -42,7 +42,6 @@ public class GameController : MonoBehaviour {
 
 		ShowQuestion ();
 		isRoundActive = true;
-
 	}
 		
 	private void ShowQuestion()

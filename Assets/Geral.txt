@@ -10,3 +10,5 @@ A cena antiga Game esta sendo utilizada para reorganizarmos o jogo
 e como padrao de audios e respostas, posteriormente sera excluida
 A cena Persistent sera excluida tambem mas so depois de realocarmos o DataController
 e resolvermos os erros que aparecerao com essa mudanca
+
+OBS: excluimos o gameobject DataController nas cenas de fases para quebrar o loop

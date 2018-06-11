@@ -12,11 +12,19 @@ public class DataController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		DontDestroyOnLoad (gameObject);
-		LoadGameData ();
-		LoadPlayerProgress ();
-		SceneManager.LoadScene("MenuScreen");
+		SceneManager.LoadScene("MenuInicial");
 	}
 
+	public void GameController () {
+		Scene tmp = SceneManager.GetActiveScene ();
+		if (tmp.name == "MenuTemas") {
+		LoadGameData ();
+		LoadPlayerProgress ();
+		SavePlayerProgress ();
+		GetCurrentRoundData ();
+	}
+}
+		
 	public RoundData GetCurrentRoundData() {
 		return allRoundData [0];
 	}

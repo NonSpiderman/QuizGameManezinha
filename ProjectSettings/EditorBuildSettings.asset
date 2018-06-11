@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Persistent.unity
     guid: a25fa731da7310e48bd67e3382499201
   - enabled: 1
-    path: Assets/Scenes/MenuScreen.unity
+    path: Assets/Scenes/MenuInicial.unity
     guid: f22abc5ae1dec3e48b0d711007c772e1
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: bf2b3523da71e0844a3da4000724e7f9
   - enabled: 1
-    path: Assets/Scenes/Levels.unity
+    path: Assets/Scenes/MenuTemas.unity
     guid: 91770ce99ce7b4c4db47f4b40e780392
   - enabled: 1
     path: Assets/Scenes/Inglesh.unity
@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Manezes.unity
     guid: 2edd578ce7bfb474ebef4ac793e091d8
   - enabled: 1
-    path: Assets/Scenes/Omanhe.unity
+    path: Assets/Scenes/Ohmanhe.unity
     guid: 5c51c5f6f62ffb440b4ebda91ac81c18
   - enabled: 1
     path: Assets/Scenes/Turishmo.unity

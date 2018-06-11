@@ -20,4 +20,8 @@ public class LevelManager : MonoBehaviour {
 	public void StartManezes () {
 		SceneManager.LoadScene ("Manezes");
 	}
+
+	public void StartMenuTemas () {
+		SceneManager.LoadScene ("MenuTemas");
+	}
 }

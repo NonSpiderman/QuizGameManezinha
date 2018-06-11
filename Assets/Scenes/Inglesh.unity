@@ -327,8 +327,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -263, y: 154}
-  m_SizeDelta: {x: 250, y: 250}
+  m_AnchoredPosition: {x: -960.9, y: 1171.6}
+  m_SizeDelta: {x: 731.6, y: 731.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &346096962
 GameObject:
@@ -818,6 +818,11 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114635282428792506, guid: e7bc9025e837738469f60d21c6aca6ea,
+        type: 2}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e7bc9025e837738469f60d21c6aca6ea, type: 2}
   m_IsPrefabParent: 0
@@ -1194,88 +1199,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Score: 00'
---- !u!1 &1713869929
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1713869931}
-  - component: {fileID: 1713869930}
-  m_Layer: 0
-  m_Name: DataController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1713869930
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1713869929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627c7ff56faee5d43ae742782882b450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allRoundData:
-  - name: Round Zero
-    timeLimitInSecond: 50
-    addedTimeForCorrectAnswer: 10
-    pointsAddedForCorrectAnswer: 10
-    questions:
-    - questionType: 0
-      questionText: O que foi dito?
-      questionAudio: {fileID: 8300000, guid: a621ab07425790b489f03d2001d227c3, type: 3}
-      answers:
-      - answerText: Molha cara, vou te dizer que quando eu nasci...
-        isCorrect: 0
-      - answerText: Olha amigo,eu acho que quando eu nasci...
-        isCorrect: 0
-      - answerText: Olha cara, vou te dizer que eu acho que quando eu nasci...
-        isCorrect: 1
-    - questionType: 0
-      questionText: "\xD4 qu\xE8 foish dit\xF3?"
-      questionAudio: {fileID: 8300000, guid: d95bcc0c1a760174d9614ac703d9b668, type: 3}
-      answers:
-      - answerText: "N\xE3o \xE3dah posh v\xE1i s\xEA pi\xF3, qu\xE2ntu mos t\xFA
-          \xE3dah m\xE1sh t\xFA v\xE1sh banh\xE1"
-        isCorrect: 0
-      - answerText: "N\xE3o c\xF3rri qui v\xE1i s\xEA pi\xF3, gur\xED qu\xE2ntu m\xE1sh
-          t\xFA corr\xEA m\xE1sh t\xFA v\xE1sh apanh\xE1"
-        isCorrect: 1
-      - answerText: "C\xF3rri qui v\xE1i pi\xF3, gur\xED posh m\xE1sh t\xFA corr\xEA
-          m\xE1sh t\xFA v\xF4 ganh\xE1"
-        isCorrect: 0
-    - questionType: 1
-      questionText: O que foi dito?
-      questionAudio: {fileID: 8300000, guid: bde5ab3059686e8448d28caaa83acab2, type: 3}
-      answers:
-      - answerText: "Da\xED \xE9la intreg\xF4 u s\xFArrush al\xED n\xE9 z\xE9ca...
-          a\xED \xF4 assim: \xF4 quir\xEDda cont\xE9 quid\xEAu?"
-        isCorrect: 1
-      - answerText: "Ai ela entregou o churros n\xE9 zeca... ai o assim: o querida
-          quanto \xE9 que deu?"
-        isCorrect: 0
-      - answerText: "Ela intregoh s\xFArrush, n\xE9 zeca... o queria, quanto eh quideu?"
-        isCorrect: 0
-  playerProgress: {fileID: 0}
---- !u!4 &1713869931
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1713869929}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1836818899
 Prefab:
   m_ObjectHideFlags: 0
