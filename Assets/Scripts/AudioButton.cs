@@ -8,14 +8,12 @@ public class AudioButton : MonoBehaviour {
 	private GameController gameController;
 
 	// Use this for initialization
-	void Start () 
-	{
+	void Start () {
 		gameController = FindObjectOfType<GameController> ();
 	}
 
 
-	public void HandleClick()
-	{
+	public void HandleClick() {
 		gameController.AudioButtonClicked ();
 	}
 }

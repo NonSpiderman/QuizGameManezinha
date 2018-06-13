@@ -11,20 +11,17 @@ public class AnswerButton : MonoBehaviour {
 	private GameController gameController;
 
 	// Use this for initialization
-	void Start () 
-	{
+	void Start () {
 		gameController = FindObjectOfType<GameController> ();
 	}
 
-	public void Setup(AnswerData data)
-	{
+	public void Setup(AnswerData data) {
 		answerData = data;
 		answerText.text = answerData.answerText;
 	}
 
 
-	public void HandleClick()
-	{
+	public void HandleClick() {
 		gameController.AnswerButtonClicked (answerData.isCorrect);
 	}
 }

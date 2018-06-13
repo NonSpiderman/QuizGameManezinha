@@ -3,5 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Type {
-	Manezes, Inglesh, Turishmo, Omanhe
+	Inglesh, Manezes, Turishmo, Omanhe
 }

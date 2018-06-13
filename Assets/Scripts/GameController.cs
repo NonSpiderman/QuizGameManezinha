@@ -18,24 +18,20 @@ public class GameController : MonoBehaviour {
 	public Text highScoreDisplay;
 
 	private DataController dataController;
-	private RoundData currentRoundData;
-	private QuestionData[] questionPool;
+	private Data currentRoundData;
+	private AudioData[] questionPool;
 	private AudioSource audioSource;
 
 	private bool isRoundActive;
-	private float timeRemaining;
 	private int questionIndex;
 	private int playerScore;
 	private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
 	// Use this for initialization
-	void Start () 
-	{
+	void Start () {
 		dataController = FindObjectOfType<DataController> ();
 		currentRoundData = dataController.GetCurrentRoundData ();
-		questionPool = currentRoundData.questions;
-		timeRemaining = currentRoundData.timeLimitInSecond;
-		UpdateTimeRemainingDisplay ();
+		questionPool = currentRoundData.audios;
 
 		playerScore = 0;
 		questionIndex = 0;
@@ -43,11 +39,14 @@ public class GameController : MonoBehaviour {
 		ShowQuestion ();
 		isRoundActive = true;
 	}
+
+	void Update () {
 		
-	private void ShowQuestion()
-	{
+	}
+		
+	private void ShowQuestion() {
 		RemoveAnswerButtons ();
-		QuestionData questionData = questionPool [questionIndex];
+		AudioData questionData = questionPool [questionIndex];
 
 		audioSource = audioButton.GetComponent<AudioSource>();
 		audioSource.clip = questionData.questionAudio;
@@ -65,22 +64,18 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	private void RemoveAnswerButtons()
-	{
+	private void RemoveAnswerButtons() {
 		while (answerButtonGameObjects.Count > 0) 
 		{
 			answerButtonObjectPool.ReturnObject (answerButtonGameObjects [0]);
 			answerButtonGameObjects.RemoveAt (0);
 		}
 	}
-	public void AnswerButtonClicked(bool isCorrect)
-	{
+	public void AnswerButtonClicked(bool isCorrect) {
 		if (isCorrect) 
 		{
 			playerScore += currentRoundData.pointsAddedForCorrectAnswer;
 			scoreDisplayText.text = "Score: " + playerScore.ToString ();
-			timeRemaining += currentRoundData.addedTimeForCorrectAnswer;
-
 		}
 
 		if (questionPool.Length > questionIndex + 1) {
@@ -90,16 +85,13 @@ public class GameController : MonoBehaviour {
 		{
 			EndRound ();
 		}
-
 	}
 
-	public void AudioButtonClicked ()
-	{ 
+	public void AudioButtonClicked () { 
 		audioSource.Play ();
 	}
 
-	public void EndRound()
-	{
+	public void EndRound() {
 		isRoundActive = false;
 		dataController.SubmitNewPlayerScore (playerScore);
 		highScoreDisplay.text = dataController.GetHighestPlayerScore ().ToString ();
@@ -108,30 +100,7 @@ public class GameController : MonoBehaviour {
 		roundEndDisplay.SetActive (true);
 	}
 
-	public void ReturnToMenu ()
-	{
+	public void ReturnToMenu () {
 		SceneManager.LoadScene ("MenuScreen");
-	}
-
-
-	private void UpdateTimeRemainingDisplay()
-	{
-		timeRemainingDisplayText.text = Mathf.Round (timeRemaining).ToString ();
-	}
-	// Update is called once per frame
-	void Update ()
-	{
-		if (isRoundActive) 
-		{
-			timeRemaining -= Time.deltaTime;
-			UpdateTimeRemainingDisplay ();
-
-			if (timeRemaining <= 0f) 
-			{
-				EndRound ();
-			}
-
-		}
-
 	}
 }

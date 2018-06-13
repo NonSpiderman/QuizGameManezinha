@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using System.IO;
 
 public class DataController : MonoBehaviour {
-	public RoundData[] allRoundData;
+	public Data[] allData;
 	public PlayerProgress playerProgress;
 	private string gameDataFileName = "data.json";
 
@@ -25,8 +25,8 @@ public class DataController : MonoBehaviour {
 	}
 }
 		
-	public RoundData GetCurrentRoundData() {
-		return allRoundData [0];
+	public Data GetCurrentRoundData() {
+		return allData [0];
 	}
 
 	public void SubmitNewPlayerScore(int newScore) {
@@ -49,12 +49,17 @@ public class DataController : MonoBehaviour {
 		PlayerPrefs.SetInt ("highestScore", playerProgress.highestScore);
 	}
 
+	private void SetTainhaIcon () {
+
+
+	}
+
 	private void LoadGameData () {
 		string filePath = Path.Combine (Application.streamingAssetsPath, gameDataFileName);
 		if (File.Exists (filePath)) {
 			string dataAsJson = File.ReadAllText (filePath);
 			GameData loadedData = JsonUtility.FromJson<GameData> (dataAsJson);
-			allRoundData = loadedData.allRoundData;
+			allData = loadedData.allData;
 		} else {
 			Debug.LogError ("Cannot load game data!");
 		}
