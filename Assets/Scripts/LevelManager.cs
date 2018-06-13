@@ -11,13 +11,6 @@ public class LevelManager : MonoBehaviour {
 		dataController = FindObjectOfType<DataController> ();
 	}
 
-
-	public void Controller () {
-		Scene tmp = SceneManager.GetActiveScene ();
-		if (tmp.name == "MenuTemas") {
-		}
-	}
-
 	public void StartOhmanhe() {
 		SceneManager.LoadScene ("Ohmanhe");
 	}

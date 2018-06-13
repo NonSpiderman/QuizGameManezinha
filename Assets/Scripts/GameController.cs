@@ -93,14 +93,11 @@ public class GameController : MonoBehaviour {
 
 	public void EndRound() {
 		isRoundActive = false;
-		dataController.SubmitNewPlayerScore (playerScore);
-		highScoreDisplay.text = dataController.GetHighestPlayerScore ().ToString ();
-
 		questionDisplay.SetActive (false);
 		roundEndDisplay.SetActive (true);
 	}
 
 	public void ReturnToMenu () {
-		SceneManager.LoadScene ("MenuScreen");
+		SceneManager.LoadScene ("MenuTemas");
 	}
 }
