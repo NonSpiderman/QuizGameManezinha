@@ -4,7 +4,20 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
-	
+
+	DataController dataController;
+
+	void Start () {
+		dataController = FindObjectOfType<DataController> ();
+	}
+
+
+	public void Controller () {
+		Scene tmp = SceneManager.GetActiveScene ();
+		if (tmp.name == "MenuTemas") {
+		}
+	}
+
 	public void StartOhmanhe() {
 		SceneManager.LoadScene ("Ohmanhe");
 	}

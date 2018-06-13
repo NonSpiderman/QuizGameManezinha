@@ -14,16 +14,6 @@ public class DataController : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 		SceneManager.LoadScene("MenuInicial");
 	}
-
-	public void GameController () {
-		Scene tmp = SceneManager.GetActiveScene ();
-		if (tmp.name == "MenuTemas") {
-		LoadGameData ();
-		LoadPlayerProgress ();
-		SavePlayerProgress ();
-		GetCurrentRoundData ();
-	}
-}
 		
 	public Data GetCurrentRoundData() {
 		return allData [0];
