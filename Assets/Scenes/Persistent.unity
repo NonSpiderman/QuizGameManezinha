@@ -108,181 +108,45 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1356790265
-GameObject:
+--- !u!1001 &1562158906
+Prefab:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1356790266}
-  - component: {fileID: 1356790267}
-  m_Layer: 0
-  m_Name: DataController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1356790266
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1356790265}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1356790267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1356790265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627c7ff56faee5d43ae742782882b450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allData:
-  - audioType: 0
-    tema: Inglesh
-    pointsAddedForCorrectAnswer: 1
-    audios:
-    - questionAudio: {fileID: 8300000, guid: d95bcc0c1a760174d9614ac703d9b668, type: 3}
-      answers:
-      - answerText: errado
-        isCorrect: 0
-      - answerText: certo
-        isCorrect: 1
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-    - questionAudio: {fileID: 8300000, guid: 8b6e4af2bcf203241b971a41ed602bfe, type: 3}
-      answers:
-      - answerText: certo
-        isCorrect: 1
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-    - questionAudio: {fileID: 8300000, guid: a621ab07425790b489f03d2001d227c3, type: 3}
-      answers:
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: certo
-        isCorrect: 1
-  - audioType: 1
-    tema: Manezes
-    pointsAddedForCorrectAnswer: 1
-    audios:
-    - questionAudio: {fileID: 8300000, guid: e2b333376d9123749bb0393c19d20895, type: 3}
-      answers:
-      - answerText: certo
-        isCorrect: 1
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-    - questionAudio: {fileID: 8300000, guid: f93736799aceff940a80e0902a33950f, type: 3}
-      answers:
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: certo
-        isCorrect: 1
-    - questionAudio: {fileID: 8300000, guid: 62e828275e8d19447876105e1e7da1f7, type: 3}
-      answers:
-      - answerText: certo
-        isCorrect: 1
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-  - audioType: 2
-    tema: Turishmo
-    pointsAddedForCorrectAnswer: 1
-    audios:
-    - questionAudio: {fileID: 8300000, guid: 2cbeb215c808ce8418e9c838b86ca328, type: 3}
-      answers:
-      - answerText: certo
-        isCorrect: 1
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-    - questionAudio: {fileID: 8300000, guid: 3a7bd50a40100004c9c4f2051afeb4bf, type: 3}
-      answers:
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: certo
-        isCorrect: 1
-      - answerText: errado
-        isCorrect: 0
-    - questionAudio: {fileID: 8300000, guid: 1af12d28b513d924a9c8b53c45958f59, type: 3}
-      answers:
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: certo
-        isCorrect: 1
-      - answerText: errado
-        isCorrect: 0
-  - audioType: 3
-    tema: Omanhe
-    pointsAddedForCorrectAnswer: 1
-    audios:
-    - questionAudio: {fileID: 8300000, guid: 747449de1ea0d0d4f89f4049c9e7cecc, type: 3}
-      answers:
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: certo
-        isCorrect: 1
-    - questionAudio: {fileID: 8300000, guid: d6b63e3f82b77c34681005f4d48fccf9, type: 3}
-      answers:
-      - answerText: certo
-        isCorrect: 1
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-    - questionAudio: {fileID: 8300000, guid: 2ed01703e55095f42b65eda453ee217f, type: 3}
-      answers:
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: errado
-        isCorrect: 0
-      - answerText: certo
-        isCorrect: 1
-  playerProgress: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4861511366464878, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861511366464878, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861511366464878, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861511366464878, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861511366464878, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861511366464878, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861511366464878, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861511366464878, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 00e883951e98d3043bd6b4a7c4026441, type: 2}
+  m_IsPrefabParent: 0
