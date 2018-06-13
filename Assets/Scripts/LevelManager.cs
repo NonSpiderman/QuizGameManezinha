@@ -30,4 +30,8 @@ public class LevelManager : MonoBehaviour {
 	public void StartMenuTemas () {
 		SceneManager.LoadScene ("MenuTemas");
 	}
+
+	public void StartCreditos () {
+		SceneManager.LoadScene ("Creditos");
+	}
 }

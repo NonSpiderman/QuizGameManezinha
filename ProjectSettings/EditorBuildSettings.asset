@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuInicial.unity
     guid: f22abc5ae1dec3e48b0d711007c772e1
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: bf2b3523da71e0844a3da4000724e7f9
-  - enabled: 1
     path: Assets/Scenes/MenuTemas.unity
     guid: 91770ce99ce7b4c4db47f4b40e780392
   - enabled: 1
@@ -29,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Turishmo.unity
     guid: cc235e699457dc64d907008662189909
+  - enabled: 1
+    path: "Assets/Scenes/Cr\xE9ditos.unity"
+    guid: 02278ff8dc0f0df43930c131f9ac94e5
