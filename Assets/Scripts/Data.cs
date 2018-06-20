@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class Data {
-	public Type audioType;
+	public int random;
 	public string tema;
 	public int pointsAddedForCorrectAnswer;
 	public AudioData[] audios;

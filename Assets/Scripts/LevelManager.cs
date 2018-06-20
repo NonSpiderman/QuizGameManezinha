@@ -5,33 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour {
 
-	DataController dataController;
-
 	void Start () {
-		dataController = FindObjectOfType<DataController> ();
-	}
-
-	public void StartOhmanhe() {
-		SceneManager.LoadScene ("Ohmanhe");
-	}
-
-	public void StartTurishmo () {
-		SceneManager.LoadScene ("Turishmo");
-	}
-
-	public void StartInglesh () {
-		SceneManager.LoadScene ("Inglesh");
-	}
-
-	public void StartManezes () {
-		SceneManager.LoadScene ("Manezes");
-	}
-
-	public void StartMenuTemas () {
-		SceneManager.LoadScene ("MenuTemas");
 	}
 
 	public void StartCreditos () {
 		SceneManager.LoadScene ("Creditos");
+	}
+
+	public void StartGame () {
+		SceneManager.LoadScene ("Game");
+	}
+		
+	public void Options () {
+		//ver space mullet como exemplo
 	}
 }

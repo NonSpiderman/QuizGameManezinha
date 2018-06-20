@@ -54,8 +54,10 @@ MonoBehaviour:
   answerButtonObjectPool: {fileID: 0}
   questionDisplayText: {fileID: 0}
   scoreDisplayText: {fileID: 0}
-  timeRemainingDisplayText: {fileID: 0}
   answerButtonParent: {fileID: 0}
+  tainhadisplay1: {fileID: 0}
+  tainhadisplay2: {fileID: 0}
+  tainhadisplay3: {fileID: 0}
   questionDisplay: {fileID: 0}
   roundEndDisplay: {fileID: 0}
   audioButton: {fileID: 0}

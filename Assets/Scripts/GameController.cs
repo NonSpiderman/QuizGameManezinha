@@ -9,7 +9,6 @@ public class GameController : MonoBehaviour {
 	public SimpleObjectPool answerButtonObjectPool;
 	public Text questionDisplayText;
 	public Text scoreDisplayText;
-	public Text timeRemainingDisplayText;
 	public Transform answerButtonParent;
 
 	public GameObject questionDisplay;
@@ -19,7 +18,7 @@ public class GameController : MonoBehaviour {
 
 	private DataController dataController;
 	private Data currentRoundData;
-	private AudioData[] questionPool;
+	private AudioData[] audioPool;
 	private AudioSource audioSource;
 
 	private bool isRoundActive;
@@ -27,11 +26,10 @@ public class GameController : MonoBehaviour {
 	private int playerScore;
 	private List<GameObject> answerButtonGameObjects = new List<GameObject>();
 
-	// Use this for initialization
 	void Start () {
 		dataController = FindObjectOfType<DataController> ();
 		currentRoundData = dataController.GetCurrentRoundData ();
-		questionPool = currentRoundData.audios;
+		audioPool = currentRoundData.audios;
 
 		playerScore = 0;
 		questionIndex = 0;
@@ -46,7 +44,7 @@ public class GameController : MonoBehaviour {
 		
 	private void ShowQuestion() {
 		RemoveAnswerButtons ();
-		AudioData questionData = questionPool [questionIndex];
+		AudioData questionData = audioPool [questionIndex];
 
 		audioSource = audioButton.GetComponent<AudioSource>();
 		audioSource.clip = questionData.questionAudio;
@@ -76,14 +74,29 @@ public class GameController : MonoBehaviour {
 		{
 			playerScore += currentRoundData.pointsAddedForCorrectAnswer;
 			scoreDisplayText.text = "Score: " + playerScore.ToString ();
+			ScoreCalculator ();
+				
 		}
 
-		if (questionPool.Length > questionIndex + 1) {
+		if (audioPool.Length > questionIndex + 1) {
 			questionIndex++;
 			ShowQuestion ();
 		} else 
 		{
 			EndRound ();
+		}
+	}
+
+	public void ScoreCalculator () {
+		//calculo
+		if (playerScore == 0) {
+		}
+
+		else if	(playerScore == 1) {
+		}
+		else if (playerScore == 2) {
+		}
+		else if (playerScore == 3) {
 		}
 	}
 
@@ -95,9 +108,5 @@ public class GameController : MonoBehaviour {
 		isRoundActive = false;
 		questionDisplay.SetActive (false);
 		roundEndDisplay.SetActive (true);
-	}
-
-	public void ReturnToMenu () {
-		SceneManager.LoadScene ("MenuTemas");
 	}
 }
