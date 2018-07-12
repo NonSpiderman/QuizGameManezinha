@@ -6,34 +6,43 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
+	//states of the game
+	public enum GameState { Menu, Playing, Paused, GameOver }
+	private GameState currentState;
+
+	//simpleobjectpool
 	public SimpleObjectPool answerButtonObjectPool;
+
+	//canvas
 	public Text questionDisplayText;
 	public Text scoreDisplayText;
+	public Text highScoreDisplay;
+	public GameObject backToGameIcon;
 	public Transform answerButtonParent;
-
 	public GameObject questionDisplay;
 	public GameObject roundEndDisplay;
 	public GameObject audioButton;
-	public Text highScoreDisplay;
+	public Image pauseMenu;
 
+	//data
 	private DataController dataController;
 	private Data currentRoundData;
 	private AudioData[] audioPool;
 	private AudioSource audioSource;
-
 	private bool isRoundActive;
 	private int questionIndex;
 	private int playerScore;
 	private List<GameObject> answerButtonGameObjects = new List<GameObject>();
+	private GameSettings gameSettings;
 
 	void Start () {
 		dataController = FindObjectOfType<DataController> ();
 		currentRoundData = dataController.GetCurrentRoundData ();
-		audioPool = currentRoundData.audios;
+		gameSettings = GameObject.FindGameObjectWithTag ("GameSettings").GetComponent<GameSettings> ();
 
+		audioPool = currentRoundData.audios;
 		playerScore = 0;
 		questionIndex = 0;
-
 		ShowQuestion ();
 		isRoundActive = true;
 	}
@@ -73,9 +82,7 @@ public class GameController : MonoBehaviour {
 		if (isCorrect) 
 		{
 			playerScore += currentRoundData.pointsAddedForCorrectAnswer;
-			scoreDisplayText.text = "Score: " + playerScore.ToString ();
-			ScoreCalculator ();
-				
+			scoreDisplayText.text = "Score: " + playerScore.ToString ();				
 		}
 
 		if (audioPool.Length > questionIndex + 1) {
@@ -87,20 +94,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	public void ScoreCalculator () {
-		//calculo
-		if (playerScore == 0) {
-		}
-
-		else if	(playerScore == 1) {
-		}
-		else if (playerScore == 2) {
-		}
-		else if (playerScore == 3) {
-		}
-	}
-
-	public void AudioButtonClicked () { 
+	public void AudioButtonClicked () {
 		audioSource.Play ();
 	}
 
@@ -108,5 +102,20 @@ public class GameController : MonoBehaviour {
 		isRoundActive = false;
 		questionDisplay.SetActive (false);
 		roundEndDisplay.SetActive (true);
+	}
+
+	public void PauseButton () {
+		currentState = GameState.Paused;
+		//pauseMenu.transform.Find ("PauseButton").GetComponent<Image> ().sprite = gameSettings.buttonPause;
+		if (currentState == GameState.Paused) {
+			pauseMenu.enabled = true;
+		}
+	}
+
+	public void ReturnGameButton () {
+		currentState = GameState.Playing;
+		if (currentState == GameState.Playing) {
+			pauseMenu.enabled = false;
+		}
 	}
 }

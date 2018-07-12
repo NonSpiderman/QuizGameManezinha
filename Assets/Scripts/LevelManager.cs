@@ -15,8 +15,8 @@ public class LevelManager : MonoBehaviour {
 	public void StartGame () {
 		SceneManager.LoadScene ("Game");
 	}
-		
-	public void Options () {
-		//ver space mullet como exemplo
+
+	public void ReturnToMenu () {
+		SceneManager.LoadScene ("Menu");
 	}
 }
