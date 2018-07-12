@@ -22,7 +22,9 @@ public class GameController : MonoBehaviour {
 	public GameObject questionDisplay;
 	public GameObject roundEndDisplay;
 	public GameObject audioButton;
-	public Image pauseMenu;
+	public GameObject pauseMenu;
+    public Button backToTitle;
+    public Button backToGame;
 
 	//data
 	private DataController dataController;
@@ -105,17 +107,14 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void PauseButton () {
-		currentState = GameState.Paused;
-		//pauseMenu.transform.Find ("PauseButton").GetComponent<Image> ().sprite = gameSettings.buttonPause;
-		if (currentState == GameState.Paused) {
-			pauseMenu.enabled = true;
-		}
-	}
+			pauseMenu.SetActive(true);
+            //backToGame.enabled = true;
+            //backToTitle.enabled = true;
+            Time.timeScale = 0f;
+        }
 
 	public void ReturnGameButton () {
-		currentState = GameState.Playing;
-		if (currentState == GameState.Playing) {
-			pauseMenu.enabled = false;
-		}
-	}
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1f;
+    }
 }
